@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebSHOP.Models.Produkt>
+
+<!DOCTYPE html>
+
+<h1>Каталог</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Модель
+            </th>
+            <th>
+               Описание
+            </th>
+            <th>
+               Категория
+            </th>
+            <th>
+               Цена
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prod in Model)
+        {
+            <tr>
+                <td>
+                    @prod.Name
+                </td>
+                <td>
+                    @prod.Description
+                </td>
+                <td>
+                    @prod.Category
+                </td>
+                <td>
+                    @prod.UnitPrice
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
